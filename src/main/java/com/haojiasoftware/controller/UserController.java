@@ -30,7 +30,7 @@ public class UserController {
 	
 	@RequestMapping("shuzi")
 	public String shuzi(HttpServletRequest req){
-		return "shuzi";
+		return "shuzi";  
 	}
 	
 	
