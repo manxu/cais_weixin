@@ -27,7 +27,9 @@ $(function () {
         autoplay: 2500,
         autoplayDisableOnInteraction: false
     });
-});
+});   
+
+
 </script>
 </head>
 <body>
