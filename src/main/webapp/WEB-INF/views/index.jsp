@@ -34,7 +34,7 @@ $(function () {
 </head>
 <body>
 	<div class="swiper-container">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper"> 
             <div class="swiper-slide"><img src="/static/images/1.jpg"></div>
             <div class="swiper-slide"><img src="/static/images/1.jpg"></div>
             <div class="swiper-slide"><img src="/static/images/1.jpg"></div>
