@@ -30,6 +30,7 @@ $(function () {
 });   
 
 //这个是测试push 的   
+// 这个是测试 fetch
 </script>
 </head>
 <body>
