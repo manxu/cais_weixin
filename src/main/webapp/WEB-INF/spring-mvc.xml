@@ -39,7 +39,7 @@
 	</bean>
 	
 	<!-- 定义无需Controller的url<->view直接映射 -->
-	<mvc:view-controller path="/" view-name="index"/>	
+	<!-- <mvc:view-controller path="/" view-name="index"/>	 -->
 	
 	<mvc:interceptors>
 		<!-- 微信登陆拦截器 -->

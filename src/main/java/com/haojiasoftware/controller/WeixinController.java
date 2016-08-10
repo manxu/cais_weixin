@@ -151,11 +151,11 @@ public class WeixinController {
 		log.error(tokenJson.toString()+":::::::"+openId);
 		// 放入cookie保存
 		WeixinUtil.saveCookieByOpenid(openId, response);
-		
+		request.getSession().setAttribute("openId", openId);
 		switch(where) {
-			case 1: return "redirect:/index/index";	// 首页		
-			case 2: return "redirect:/health/dataCompare";//数据中心
-			case 3: return "redirect:/index/device_user_list"; //设置
+			case 1: return "redirect:/";	// 首页		
+			case 2: return "redirect:/";//数据中心
+			case 3: return "redirect:/"; //设置
 			default: return "";
 		}
 	}

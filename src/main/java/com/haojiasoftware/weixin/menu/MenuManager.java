@@ -21,18 +21,18 @@ public class MenuManager {
         ViewButton viewBtn11 = new ViewButton();
         viewBtn11.setName("首页");
         viewBtn11.setType("view");
-        viewBtn11.setUrl(WeixinCommon.MENU_BASE + "/index/index");
+        viewBtn11.setUrl(WeixinCommon.MENU_BASE + "");
         
         ViewButton viewBtn21 = new ViewButton();
         viewBtn21.setName("数据中心");
         viewBtn21.setType("view");
-        viewBtn21.setUrl(WeixinCommon.MENU_BASE + "/health/dataCompare");
+        viewBtn21.setUrl(WeixinCommon.MENU_BASE + "");
     	
     	
         ViewButton viewBtn31 = new ViewButton();
         viewBtn31.setName("设置");
         viewBtn31.setType("view");
-        viewBtn31.setUrl(WeixinCommon.MENU_BASE + "/index/device_user_list");
+        viewBtn31.setUrl(WeixinCommon.MENU_BASE + "");
          
 
         // 主菜单

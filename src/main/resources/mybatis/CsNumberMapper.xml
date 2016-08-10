@@ -17,4 +17,35 @@
     from cs_number
     where id = #{id,jdbcType=INTEGER}
   </select>
+  
+  <select id="selectByUserIdAndAcId" parameterType="java.util.Map" resultMap="BaseResultMap">
+  	select 
+  	<include refid="Base_Column_List" />
+  	from cs_number 
+  	where 1=1 and user_id = #{userId} and activity_id = #{acId} limit 1;
+  </select>
+  
+  <select id="selectByAcAndNumber" parameterType="java.util.Map" resultType="java.lang.Integer">
+  	select count(id) from cs_number
+  	where activity_id = #{acId} and number = #{number}
+  </select>
+  
+  <select id="selectCountByAcId" parameterType="java.lang.Long" resultType="java.lang.Integer">
+  	select count(id) from cs_number where activity_id = #{acId}
+  </select>
+  
+  <select id="getLuck" parameterType="java.util.Map" resultType="NumberCount">
+  	select ce.activity_id as activityId,
+	ce.user_id as userId,
+	u.nick_name as userName,
+	ce.number as number,
+	ce.create_time as createTime  
+	from 
+	(select * from 
+		(select number,count(number) c,user_id,create_time,activity_id from cs_number where activity_id=#{acId} GROUP BY number) cc 
+		where cc.c=1
+	) ce 
+	left join cs_user u on ce.user_id = u.id order by ce.create_time asc limit #{limit}
+  </select>
+  
 </mapper>

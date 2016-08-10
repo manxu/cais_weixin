@@ -15,7 +15,7 @@ public class CsNumber extends IdEntity{
 
     private Long activityId;
 
-    private Long number;
+    private Integer number;
 
     private Date createTime;
 
@@ -35,11 +35,11 @@ public class CsNumber extends IdEntity{
         this.activityId = activityId;
     }
 
-    public Long getNumber() {
+    public Integer getNumber() {
         return number;
     }
 
-    public void setNumber(Long number) {
+    public void setNumber(Integer number) {
         this.number = number;
     }
 
